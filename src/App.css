@@ -1,0 +1,222 @@
+/* General body styles */
+body {
+  font-family:cursive;
+  background-color: #0f172a; /* Deep midnight blue background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  line-height: 1.6;
+  color: #e2e8f0; /* Soft, slightly muted text color */
+}
+
+/* Main app container */
+.app-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 32px;
+  background-color: #1e293b; /* Deep slate blue container background */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* More refined shadow */
+  border-radius: 16px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+  border: 1px solid #334155; /* Subtle border */
+  overflow: hidden; /* Ensures border-radius clips content */
+}
+
+/* Subtle gradient hover effect for app container */
+.app-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, #1e293b 0%, #273549 100%);
+}
+
+/* Header styling */
+.app-header {
+  text-align: center;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 32px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: cursive;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* User info section */
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  font-family:inherit;
+  font-size: medium;
+  padding: 15px;
+  background-color: #334155; /* Slate gray background */
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.user-info:hover {
+  background-color: #3a4b5c;
+}
+
+.user-greeting {
+  font-size: 1.1rem;
+  color: #cbd5e1; /* Soft, light text color */
+  margin: 0;
+}
+
+.auth-switch-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 35px;
+  background-color: #4a5568; /* Dark gray background for the button */
+  color: #e0e0e0; /* Light text color for contrast */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.auth-switch-button:hover {
+  background-color: #2d3748; /* Darker background on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.auth-switch-button:active {
+  background-color: #38a169; /* Brighter background when clicked */
+  color: #ffffff; /* Change text color when active */
+}
+
+
+/* Logout button with gradient and soft shadow */
+.logout-button {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+/* New note input form with refined styling */
+.new-note-form {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.new-note-input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border: 1px solid #475569; /* Soft border color */
+  border-radius: 12px 0 0 12px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #334155; /* Slate background */
+  color: #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.new-note-input:focus {
+  border-color: #38bdf8; /* Soft blue focus */
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.new-note-button {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  padding: 12px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.new-note-button:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional refined button styles */
+.toggle-view-button, .auth-switch-button {
+  background: linear-gradient(135deg, #4a5568, #374151);
+  color: #e2e8f0;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom:1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-view-button:hover, .auth-switch-button:hover {
+  background: linear-gradient(135deg, #374151, #1f2937);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Notes list with smooth scrollbar */
+.notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 350px;
+  overflow-y: auto;
+  border-radius: 12px;
+}
+
+.notes-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.notes-list::-webkit-scrollbar-track {
+  background: #334155;
+  border-radius: 8px;
+}
+
+.notes-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  border-radius: 8px;
+}
+
+.notes-list::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .app-container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .app-header {
+    font-size: 2rem;
+  }
+}
+
